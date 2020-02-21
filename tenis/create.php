@@ -2,9 +2,9 @@
 // required headers
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
-header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Methods: HEAD, GET, POST, PUT, PATCH, DELETE, OPTIONS");
 header("Access-Control-Max-Age: 3600");
-header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With, X-API-KEY, Origin, Accept, Access-Control-Request-Method,Access-Control-Request-Headers, Authorization");
 
 // Includes necessários:
 include_once '../config/database.php';
@@ -18,8 +18,8 @@ $db = $database->getConnection();
 $tenis = new Tenis($db);
 
 // Pegando os dados:
-$dados = json_decode(file_get_contents("php://input"));
-
+$json = file_get_contents('php://input');
+$dados = json_decode($json);
 //checando se dados são vazios:
 if (
     !empty($dados->nome) &&
@@ -46,8 +46,5 @@ if (
 } else {
     //Setando resposta - 400 Bad request
     http_response_code(400);
-
-    //
-
-    echo json_encode(array("message" => "Dados incompletos, impossível criar o produto."));
+    echo json_encode(array("message" => "Dados incompletos, impossivel criar o produto."));
 }

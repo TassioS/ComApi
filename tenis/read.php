@@ -1,6 +1,7 @@
 <?php
 // Headers
 header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST,OPTIONS,GET");
 header("Content-Type: application/json; charset=UTF-8");
 
 // Includes necessários

@@ -50,7 +50,6 @@ class Tenis
         $stmt->bindParam(":preco", $this->preco);
         $stmt->bindParam(":cor", $this->cor);
         $stmt->bindParam(":fabricacao", $this->fabricacao);
-
         if ($stmt->execute()) {
             return true;
         } else {
