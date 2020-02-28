@@ -152,16 +152,6 @@ li a {
 
 /* Change the link color on hover */
 
-li a:hover {
-    background-color: #555;
-    color: white;
-}
-
-.active {
-    background-color: #4CAF50;
-    color: white;
-}
-
 ul {
     border: 1px solid #555;
 }
@@ -171,6 +161,93 @@ li {
     border-bottom: 1px solid #555;
 }
 
-li:last-child {
-    border-bottom: none;
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#page-title,
+#menu-title {
+    text-align: center;
+}
+
+#logoComp {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    background-color: rgba(147, 158, 253, 0.801);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+}
+
+#side-bar {
+    display: flexbox;
+    position: sticky;
+}
+
+
+/** Abaixo desse comentário são apenas testes **/
+
+header[role="banner"] #logo-main {
+    display: block;
+    margin: 20px auto;
+}
+
+#navbar-primary.navbar-default {
+    background: transparent;
+    border: none;
+}
+
+#navbar-primary.navbar-default .navbar-nav {
+    width: 100%;
+    text-align: center;
+}
+
+#navbar-primary.navbar-default .navbar-nav>li {
+    display: inline-block;
+    float: none;
+}
+
+#navbar-primary.navbar-default .navbar-nav>li>a {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#navbar-primary.navbar-default .navbar-nav {
+    background-color: rgb(177, 255, 177);
+}
+
+.btn:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.btn {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+}
+
+.tr:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+#texto-inicial {
+    text-align: center;
 }

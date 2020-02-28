@@ -85,7 +85,7 @@ class Tenis
          nome = :nome,
          preco = :preco,
          cor = :cor,
-         fabricacao = :fabricacao 
+         fabricacao = :fabricacao
         WHERE
          id = :id;";
 
